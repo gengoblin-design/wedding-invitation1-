@@ -1203,9 +1203,9 @@ section {
     text-align: right; 
     margin-top: 2.5rem; 
     margin-bottom: 0; 
-    font-weight: 600; 
+    font-weight: 400; 
     color: #333; 
-    font-size: 1.2rem; 
+    font-size: 1rem; 
 }
 
 .letter-footer { 
