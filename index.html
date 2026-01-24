@@ -778,10 +778,10 @@
             const googleFormUrl = 'https://forms.google.com/your-form-id';
             window.open(googleFormUrl, '_blank');
         }
-        function openMap() {
-            const address = '東京都渋谷区代々木神園町1-1';
-            const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
-    window.open(directionsUrl, '_blank');;
+       function openMap() {
+           const address = '明治神宮神楽殿 東京都渋谷区代々木神園町1-1';
+           const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+           window.open(mapsUrl, '_blank');
         }
         document.addEventListener('DOMContentLoaded', function() {
             const rsvpForm = document.getElementById('rsvpForm');
