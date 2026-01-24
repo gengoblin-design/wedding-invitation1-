@@ -3,1614 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>結婚式のご招待 - Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Masashi & Dana 結婚式 - 2026年9月26日</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Playfair+Display:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-       :root {
-    --primary-color: #c9302c;      /* 朱色（神社の鳥居色） */
-    --secondary-color: #8b4513;    /* 茶色（木材色） */
-    --accent-color: #f5f5dc;       /* 和紙色 */
-    --gold-color: #ffd700;         /* 金色（装飾用） */
-    --sakura-pink: #ffb7c5;        /* 桜色 */
-    --deep-green: #2d5016;         /* 深緑（松の色） */
-    --text-dark: #2c2c2c;
-    --text-light: #666;
-    --bg-light: #faf8f5;
-    --white: #ffffff;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    --gradient: linear-gradient(135deg, var(--primary-color), var(--gold-color));
-}
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Noto Serif JP', serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .hero-section {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            position: relative;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        .couple-names {
-            font-family: 'Dancing Script', cursive;
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .bride-name, .groom-name {
-            color: var(--primary-color);
-        }
-        .ampersand {
-            color: var(--white);
-            margin: 0 1rem;
-            font-size: 3rem;
-        }
-        .wedding-date {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-        .invitation-text {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-        }
-        .countdown-container {
-            margin-top: 2rem;
-        }
-        .countdown-container h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .time-unit {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            min-width: 80px;
-        }
-        .time-number {
-            display: block;
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        .time-label {
-            font-size: 0.9rem;
-            color: var(--white);
-            opacity: 0.8;
-        }
-        section {
-            padding: 5rem 0;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
-        .couple-photos {
-            background: var(--white);
-        }
-        .photos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .photo-card {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-        .photo-card:hover {
-            transform: translateY(-5px);
-        }
-        .photo-placeholder {
-            height: 300px;
-            background: var(--accent-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-        }
-        .photo-placeholder i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        .story-text {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-        }
-        .story-text p {
-            margin-bottom: 1rem;
-        }
-        .ceremony-schedule {
-            background: var(--bg-light);
-        }
-        .schedule-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 3rem;
-            position: relative;
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-        .timeline-time {
-            background: var(--gradient);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: 600;
-            min-width: 80px;
-            text-align: center;
-            margin-right: 2rem;
-        }
-        .timeline-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        .timeline-content p {
-            color: var(--text-light);
-        }
-        .venue-info {
-            background: var(--white);
-        }
-        .venue-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .venue-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-        .venue-card:hover {
-            transform: translateY(-5px);
-        }
-        .venue-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        .venue-card h3 i {
-            margin-right: 0.5rem;
-        }
-        .venue-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-        .venue-address, .venue-access {
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-        }
-        .map-container {
-            text-align: center;
-        }
-        .map-placeholder {
-            height: 300px;
-            background: var(--accent-color);
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-        }
-        .map-placeholder i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        .map-button {
-            background: var(--gradient);
-            color: var(--white);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 1rem;
-            transition: transform 0.3s ease;
-        }
-        .map-button:hover {
-            transform: translateY(-2px);
-        }
-        .map-button i {
-            margin-right: 0.5rem;
-        }
-        .important-info {
-            background: var(--bg-light);
-        }
-        .info-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .info-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-        .info-card:hover {
-            transform: translateY(-5px);
-        }
-        .info-card i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .info-card h3 {
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-        .info-card p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-        .info-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        .info-link:hover {
-            color: var(--secondary-color);
-        }
-        .rsvp-section {
-            background: var(--white);
-        }
-        .rsvp-description {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            color: var(--text-light);
-        }
-        .rsvp-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-        .rsvp-btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .rsvp-btn.primary {
-            background: var(--gradient);
-            color: var(--white);
-        }
-        .rsvp-btn.secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-        .rsvp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-        .rsvp-form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-        .submit-btn {
-            background: var(--gradient);
-            color: var(--white);
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-size: 1rem;
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-        .submit-btn:hover {
-            transform: translateY(-2px);
-        }
-        .footer {
-            background: var(--text-dark);
-            color: var(--white);
-            padding: 3rem 0;
-            text-align: center;
-        }
-        .couple-names-footer {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .wedding-date-footer {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-        .thank-you {
-            color: var(--accent-color);
-            font-style: italic;
-        }
-        @media (max-width: 768px) {
-            .couple-names {
-                font-size: 2.5rem;
-            }
-            .ampersand {
-                font-size: 2rem;
-                margin: 0 0.5rem;
-            }
-            .countdown-timer {
-                gap: 1rem;
-            }
-            .time-unit {
-                min-width: 60px;
-                padding: 0.8rem;
-            }
-            .time-number {
-                font-size: 1.5rem;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-            .timeline-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            .timeline-time {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-            .rsvp-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .rsvp-btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-            section {
-                padding: 3rem 0;
-            }
-            .couple-names {
-                font-size: 2rem;
-            }
-            .photos-grid {
-                grid-template-columns: 1fr;
-            }
-            .venue-details {
-                grid-template-columns: 1fr;
-            }
-            .info-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        /* =========================
-   写真セクション用CSS
-========================= */
-
-/* プロフィールセクション */
-.profile-section {
-    background: var(--white);
-    padding: 5rem 0;
-}
-
-.profile-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.profile-card {
-    background: var(--bg-light);
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.profile-card:hover {
-    transform: translateY(-10px);
-}
-
-.profile-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient);
-}
-
-.profile-photo {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 2rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid var(--primary-color);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.profile-photo .photo-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
-}
-
-.profile-photo .photo-placeholder i {
-    font-size: 4rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.profile-name {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.profile-description {
-    color: var(--text-light);
-    line-height: 1.8;
-    font-size: 1rem;
-}
-
-/* 思い出ギャラリー */
-.memory-gallery {
-    background: var(--bg-light);
-    padding: 5rem 0;
-}
-
-.timeline-photos {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.timeline-photos::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--gradient);
-    transform: translateX(-50%);
-}
-
-.memory-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4rem;
-    position: relative;
-}
-
-.memory-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.memory-item::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    border: 4px solid var(--white);
-    box-shadow: 0 0 0 4px var(--primary-color);
-    z-index: 2;
-}
-
-.memory-photo {
-    flex: 0 0 300px;
-    height: 200px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    position: relative;
-}
-
-.memory-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.memory-photo .photo-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
-}
-
-.memory-photo .photo-placeholder i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.memory-content {
-    flex: 1;
-    padding: 2rem;
-    background: var(--white);
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    margin: 0 2rem;
-}
-
-.memory-content h4 {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.memory-content p {
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-/* 前撮り写真セクション */
-.pre-wedding-photos {
-    background: var(--white);
-    padding: 5rem 0;
-}
-
-.photo-categories {
-    display: grid;
-    gap: 4rem;
-}
-
-.photo-category {
-    background: var(--bg-light);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-}
-
-.category-title {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.photo-item {
-    position: relative;
-    aspect-ratio: 4/3;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-.photo-item:hover {
-    transform: scale(1.05);
-}
-
-.gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.photo-item .photo-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
-}
-
-.photo-item .photo-placeholder i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* 会場紹介写真セクション */
-.venue-photos {
-    background: var(--bg-light);
-    padding: 5rem 0;
-}
-
-.venue-gallery {
-    display: grid;
-    gap: 4rem;
-}
-
-.venue-showcase {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-}
-
-.venue-showcase-title {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.venue-photos-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    height: 400px;
-}
-
-.venue-photo-main {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.venue-img-main {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.main-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
-    text-align: center;
-}
-
-.main-placeholder i {
-    font-size: 4rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.venue-photos-sub {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.venue-photo-item {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-.venue-photo-item:hover {
-    transform: scale(1.02);
-}
-
-.venue-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.venue-photo-item .photo-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-.venue-photo-item .photo-placeholder i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .profile-cards {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .timeline-photos::before {
-        left: 30px;
-    }
-    
-    .memory-item {
-        flex-direction: column !important;
-        text-align: center;
-        padding-left: 60px;
-    }
-    
-    .memory-item::before {
-        left: 30px;
-    }
-    
-    .memory-content {
-        margin: 1rem 0;
-    }
-    
-    .photo-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-    }
-    
-    .venue-photos-grid {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-    
-    .venue-photo-main {
-        height: 250px;
-    }
-    
-    .venue-photos-sub {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        height: 120px;
-    }
-}
-        /* =========================
-   和風装飾要素
-========================= */
-
-/* 桜の花びらアニメーション */
-.sakura-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.sakura-petal {
-    position: absolute;
-    color: var(--sakura-pink);
-    font-size: 1.5rem;
-    animation: fall linear infinite;
-    opacity: 0.7;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-100vh) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-/* 和風セクション区切り */
-.japanese-divider {
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent, 
-        var(--gold-color), 
-        var(--primary-color), 
-        var(--gold-color), 
-        transparent
-    );
-    margin: 3rem 0;
-    position: relative;
-}
-
-.japanese-divider::before {
-    content: '🌸';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--bg-light);
-    padding: 0 1rem;
-    font-size: 1.2rem;
-}
-
-/* 和風カードの装飾 */
-.japanese-card {
-    position: relative;
-    background: linear-gradient(135deg, var(--bg-light), var(--accent-color));
-    border: 2px solid var(--gold-color);
-}
-
-.japanese-card::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    background: radial-gradient(circle, var(--gold-color), transparent);
-    border-radius: 50%;
-    opacity: 0.3;
-}
-
-/* 鳥居アイコンの強調 */
-.fa-torii-gate {
-    color: var(--primary-color) !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    font-size: 1.3em !important;
-}
-
-/* 和風ボタンスタイル */
-.japanese-button {
-    background: linear-gradient(135deg, var(--primary-color), var(--gold-color));
-    border: 2px solid var(--gold-color);
-    color: var(--white);
-    position: relative;
-    overflow: hidden;
-}
-
-.japanese-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.japanese-button:hover::before {
-    left: 100%;
-}
-
-/* セクションタイトルの和風装飾 */
-.section-title {
-    font-family: 'Shippori Mincho', serif;
-    position: relative;
-}
-
-.section-title::before {
-    content: '🌸';
-    position: absolute;
-    left: -2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    opacity: 0.6;
-}
-
-.section-title::after {
-    background: linear-gradient(90deg, var(--primary-color), var(--gold-color), var(--primary-color));
-}
-
-/* ヒーローセクションの和風オーバーレイ */
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(201, 48, 44, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
-    z-index: 1;
-}
-
-/* プロフィールカードの和風装飾 */
-.profile-card {
-    background: linear-gradient(135deg, var(--bg-light), var(--accent-color));
-    border: 1px solid var(--gold-color);
-}
-
-.profile-card::before {
-    background: linear-gradient(90deg, var(--primary-color), var(--gold-color));
-}
-
-/* 前撮り写真セクションの和風装飾 */
-.japanese-style {
-    background: linear-gradient(135deg, var(--accent-color), var(--bg-light));
-    border: 2px solid var(--primary-color);
-}
-
-.western-style {
-    background: linear-gradient(135deg, var(--bg-light), var(--accent-color));
-    border: 2px solid var(--gold-color);
-}
-    </style>
 </head>
 <body>
-    <!-- 桜の花びらアニメーション -->
-    <div class="sakura-container" id="sakuraContainer"></div>
+    <!-- ヘッダー・カバーセクション -->
     <header class="hero-section">
-    <header class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="couple-names">
-                <span class="bride-name">Dana</span>
-                <span class="ampersand">&</span>
-                <span class="groom-name">Masashi</span>
+                <h1 class="groom-name">Masashi</h1>
+                <div class="ampersand">&</div>
+                <h1 class="bride-name">Dana</h1>
             </div>
-            <p class="wedding-date">2026年9月26日</p>
-            <p class="invitation-text">私たちの特別な日にご一緒していただけませんか</p>
+            <div class="wedding-date">
+                <p class="date-text">2026年9月26日</p>
+                <p class="venue-text">明治神宮 × 明治記念館</p>
+            </div>
             <div class="countdown-container">
-                <h3>あと</h3>
-                <div class="countdown-timer" id="countdown">
-                    <div class="time-unit">
-                        <span class="time-number" id="days">0</span>
-                        <span class="time-label">日</span>
+                <div id="countdown" class="countdown-display">
+                    <div class="countdown-item">
+                        <span id="days">000</span>
+                        <label>日</label>
                     </div>
-                    <div class="time-unit">
-                        <span class="time-number" id="hours">0</span>
-                        <span class="time-label">時間</span>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <label>時間</label>
                     </div>
-                    <div class="time-unit">
-                        <span class="time-number" id="minutes">0</span>
-                        <span class="time-label">分</span>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <label>分</label>
                     </div>
-                    <div class="time-unit">
-                        <span class="time-number" id="seconds">0</span>
-                        <span class="time-label">秒</span>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <label>秒</label>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
-      <!-- プロフィールセクション -->
-    <section class="profile-section">
+    <!-- ナビゲーション -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about">お二人について</a></li>
+            <li><a href="#schedule">スケジュール</a></li>
+            <li><a href="#venue">会場案内</a></li>
+            <li><a href="#details">詳細・注意事項</a></li>
+            <li><a href="#rsvp">出欠確認</a></li>
+        </ul>
+    </nav>
+
+    <!-- お二人についてセクション -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">お二人のご紹介</h2>
-            <div class="profile-cards">
-                <div class="profile-card bride-card">
-                    <div class="profile-photo">
-                        <img src="bride-photo.jpg" alt="新婦様" class="profile-img">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user-circle"></i>
-                            <p>新婦様のお写真</p>
-                        </div>
+            <h2 class="section-title">お二人について</h2>
+            <div class="couple-profiles">
+                <div class="profile groom-profile">
+                    <div class="profile-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="新郎 Masashi" />
                     </div>
                     <div class="profile-info">
-                        <h3 class="profile-name">新婦名</h3>
+                        <h3>新郎</h3>
+                        <h4>Masashi</h4>
                         <p class="profile-description">
-                            趣味：読書、料理<br>
-                            好きな場所：カフェ<br>
-                            一言：素敵な一日にしましょう
+                            日本の伝統を大切にしながら、新しい文化との出会いを楽しむ。
+                            Danaとの出会いが人生に新たな色彩をもたらしました。
                         </p>
                     </div>
                 </div>
-                
-                <div class="profile-card groom-card">
-                    <div class="profile-photo">
-                        <img src="groom-photo.jpg" alt="新郎様" class="profile-img">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-user-circle"></i>
-                            <p>新郎様のお写真</p>
-                        </div>
+                <div class="profile bride-profile">
+                    <div class="profile-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c9c0e8e3?w=400&h=400&fit=crop&crop=face" alt="新婦 Dana" />
                     </div>
                     <div class="profile-info">
-                        <h3 class="profile-name">新郎名</h3>
+                        <h3>新婦</h3>
+                        <h4>Dana</h4>
                         <p class="profile-description">
-                            趣味：スポーツ、映画鑑賞<br>
-                            好きな場所：海<br>
-                            一言：皆様と素晴らしい時間を
+                            カザフスタンの大草原で育った自由な魂。
+                            日本の美しい文化に魅了され、Masashiと共に新たな人生を歩みます。
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="couple-photos">
-        <div class="container">
-            <h2 class="section-title">Our Story</h2>
-            <div class="photos-grid">
-                <div class="photo-card">
-                    <div class="photo-placeholder">
-                        <i class="fas fa-heart"></i>
-                        <p>お二人の写真をここに配置</p>
+            
+            <!-- 思い出の写真ギャラリー -->
+            <div class="memory-gallery">
+                <h3>思い出の瞬間</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&h=400&fit=crop" alt="思い出1" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=400&fit=crop" alt="思い出2" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=600&h=400&fit=crop" alt="思い出3" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop" alt="思い出4" />
                     </div>
                 </div>
-                <div class="photo-card">
-                    <div class="photo-placeholder">
-                        <i class="fas fa-camera"></i>
-                        <p>思い出の写真</p>
-                    </div>
-                </div>
-            </div>
-            <div class="story-text">
-                <p>私たちは2020年の春に出会い、お互いを支え合いながら歩んできました。</p>
-                <p>この度、皆様に見守られながら新しい人生をスタートさせていただきたく、</p>
-                <p>心を込めてご招待申し上げます。</p>
             </div>
         </div>
     </section>
 
-    <section class="ceremony-schedule">
+    <!-- スケジュールセクション -->
+    <section id="schedule" class="schedule-section">
         <div class="container">
-            <h2 class="section-title">Order of Ceremony</h2>
-            <div class="schedule-timeline">
+            <h2 class="section-title">当日のスケジュール</h2>
+            <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-time">09:50</div>
+                    <div class="timeline-time">9:50</div>
                     <div class="timeline-content">
-                        <h3>Meeting time</h3>
-                        <p>ゲストの皆様の受付を開始いたします</p>
+                        <h4>集合</h4>
+                        <p>明治神宮神楽殿にお集まりください</p>
+                        <span class="timeline-note">時間厳守でお願いいたします</span>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">10:40</div>
                     <div class="timeline-content">
-                        <h3>Traditional wedding ceremony</h3>
-                        <p>神前式にて執り行います</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-time">11:20</div>
-                    <div class="timeline-content">
-                        <h3>Photo shooting</h3>
-                        <p>記念撮影の後、バスにて披露宴会場へ向かいます</p>
+                        <h4>挙式開始</h4>
+                        <p>明治神宮での神前式</p>
+                        <span class="timeline-location">〒151-8557 東京都渋谷区代々木神園町1-1</span>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">12:30</div>
                     <div class="timeline-content">
-                        <h3>Reception</h3>
-                        <p>披露宴の受付を行います。庭園にてご歓談ください</p>
+                        <h4>披露宴受付</h4>
+                        <p>明治記念館での受付開始</p>
+                        <span class="timeline-location">〒107-8507 東京都港区元赤阪2-2-23</span>
                     </div>
                 </div>
-                 <div class="timeline-item">
+                <div class="timeline-item">
                     <div class="timeline-time">13:00</div>
                     <div class="timeline-content">
-                        <h3>Wedding party</h3>
-                        <p>お食事とともにお楽しみください</p>
+                        <h4>披露宴開始</h4>
+                        <p>お食事とお祝いのひととき</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">15:30</div>
                     <div class="timeline-content">
-                        <h3>Wrap up</h3>
-                        <p>ありがとうございました</p>
+                        <h4>お開き</h4>
+                        <p>披露宴終了</p>
                     </div>
                 </div>
-                 <div class="timeline-item">
+                <div class="timeline-item">
                     <div class="timeline-time">TBD</div>
                     <div class="timeline-content">
-                        <h3>After party</h3>
-                        <p>ご都合つく方はぜひご参加ください</p>
+                        <h4>二次会</h4>
+                        <p>詳細は後日ご案内いたします</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
- <!-- 前撮り写真セクション -->
-    <section class="pre-wedding-photos">
+
+    <!-- 会場案内セクション -->
+    <section id="venue" class="venue-section">
         <div class="container">
-            <h2 class="section-title">前撮り写真</h2>
-            <div class="photo-categories">
-                <!-- 和装写真 -->
-                <div class="photo-category japanese-style">
-                    <h3 class="category-title">
-                        <i class="fas fa-torii-gate"></i>
-                        和装
-                    </h3>
-                    <div class="photo-grid">
-                        <div class="photo-item">
-                            <img src="japanese-1.jpg" alt="和装写真1" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>和装写真1</p>
-                            </div>
+            <h2 class="section-title">会場案内</h2>
+            <div class="venue-info">
+                <div class="venue-card ceremony">
+                    <h3>挙式会場</h3>
+                    <h4>明治神宮</h4>
+                    <p class="venue-address">〒151-8557 東京都渋谷区代々木神園町1-1</p>
+                    <p class="venue-description">
+                        明治天皇と昭憲皇太后をお祀りする神社。都心にありながら豊かな森に囲まれた神聖な空間で、伝統的な神前式を執り行います。
+                    </p>
+                </div>
+                <div class="venue-card reception">
+                    <h3>披露宴会場</h3>
+                    <h4>明治記念館</h4>
+                    <p class="venue-address">〒107-8507 東京都港区元赤阪2-2-23</p>
+                    <p class="venue-description">
+                        明治神宮外苑の緑豊かな環境に佇む、格式高い迎賓館。日本の美と伝統を感じられる空間で、心温まる披露宴をお楽しみください。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 地図セクション -->
+            <div class="map-section">
+                <h3>アクセス</h3>
+                <div class="map-container">
+                    <div id="map" class="map-embed">
+                        <!-- Google Maps埋め込み -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280845847!2d139.69953731525394!3d35.67614598019441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb2eb3108d1%3A0x302061c209f2b8dd!2z5piO5rK755We5a6u!5e0!3m2!1sja!2sjp!4v1642000000000!5m2!1sja!2sjp"
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="route-buttons">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=明治神宮神楽殿" target="_blank" class="route-btn">
+                            <i class="fas fa-route"></i>
+                            ルート検索
+                        </a>
+                        <a href="https://www.google.com/maps/place/明治神宮/@35.6761456,139.6995373,17z" target="_blank" class="route-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            地図で確認
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 詳細・注意事項セクション -->
+    <section id="details" class="details-section">
+        <div class="container">
+            <h2 class="section-title">詳細・注意事項</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h3><i class="fas fa-clock"></i> 時間について</h3>
+                    <ul>
+                        <li>集合時間は<strong>9時50分厳守</strong>でお願いいたします</li>
+                        <li>挙式は定刻通り開始いたします</li>
+                        <li>余裕を持ってお越しください</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-tshirt"></i> ドレスコード</h3>
+                    <ul>
+                        <li>神前式のため、正装でお越しください</li>
+                        <li>男性：スーツまたは和装</li>
+                        <li>女性：フォーマルドレスまたは和装</li>
+                        <li>白色のドレスはご遠慮ください</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-camera"></i> 撮影について</h3>
+                    <ul>
+                        <li>挙式中の撮影は指定エリアのみ</li>
+                        <li>フラッシュ撮影はご遠慮ください</li>
+                        <li>披露宴では自由に撮影いただけます</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-car"></i> 交通・駐車場</h3>
+                    <ul>
+                        <li>公共交通機関のご利用をお勧めします</li>
+                        <li>JR原宿駅・明治神宮前駅より徒歩</li>
+                        <li>駐車場は数に限りがございます</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- PDF資料ダウンロード -->
+            <div class="documents-section">
+                <h3>詳細資料</h3>
+                <div class="document-links">
+                    <a href="#" class="document-link" onclick="alert('PDFファイルをアップロード後、こちらにリンクを設定してください')">
+                        <i class="fas fa-file-pdf"></i>
+                        詳細案内書（PDF）
+                    </a>
+                    <a href="#" class="document-link" onclick="alert('PDFファイルをアップロード後、こちらにリンクを設定してください')">
+                        <i class="fas fa-map"></i>
+                        会場案内図（PDF）
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 出欠確認セクション -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <h2 class="section-title">出欠確認</h2>
+            <div class="rsvp-content">
+                <p class="rsvp-description">
+                    ご出席の可否を<strong>2026年8月15日まで</strong>にお知らせください。<br>
+                    下記のフォームよりご回答をお願いいたします。
+                </p>
+                
+                <!-- Microsoft Forms埋め込み準備 -->
+                <div class="forms-container">
+                    <div class="forms-placeholder">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>出欠確認フォーム</h3>
+                        <p>Microsoft Formsのフォームをこちらに埋め込みます</p>
+                        <div class="forms-instructions">
+                            <h4>フォーム設定手順：</h4>
+                            <ol>
+                                <li>Microsoft Formsで出欠確認フォームを作成</li>
+                                <li>「共有」→「埋め込み」を選択</li>
+                                <li>生成されたiframeコードをこちらに貼り付け</li>
+                            </ol>
                         </div>
-                        <div class="photo-item">
-                            <img src="japanese-2.jpg" alt="和装写真2" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>和装写真2</p>
-                            </div>
-                        </div>
-                        <div class="photo-item">
-                            <img src="japanese-3.jpg" alt="和装写真3" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>和装写真3</p>
-                            </div>
-                        </div>
-                        <div class="photo-item">
-                            <img src="japanese-4.jpg" alt="和装写真4" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>和装写真4</p>
-                            </div>
-                        </div>
+                        <a href="https://forms.microsoft.com" target="_blank" class="forms-link">
+                            Microsoft Formsで作成
+                        </a>
                     </div>
                 </div>
                 
-                <!-- 洋装写真 -->
-                <div class="photo-category western-style">
-                    <h3 class="category-title">
-                        <i class="fas fa-heart"></i>
-                        洋装
-                    </h3>
-                    <div class="photo-grid">
-                        <div class="photo-item">
-                            <img src="western-1.jpg" alt="洋装写真1" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>洋装写真1</p>
-                            </div>
-                        </div>
-                        <div class="photo-item">
-                            <img src="western-2.jpg" alt="洋装写真2" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>洋装写真2</p>
-                            </div>
-                        </div>
-                        <div class="photo-item">
-                            <img src="western-3.jpg" alt="洋装写真3" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>洋装写真3</p>
-                            </div>
-                        </div>
-                        <div class="photo-item">
-                            <img src="western-4.jpg" alt="洋装写真4" class="gallery-img">
-                            <div class="photo-placeholder">
-                                <i class="fas fa-camera"></i>
-                                <p>洋装写真4</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="venue-info">
-        <div class="container">
-            <h2 class="section-title">会場のご案内</h2>
-            <div class="venue-details">
-                <div class="venue-card">
-                    <h3><i class="fas fa-torii-gate"></i> 挙式会場</h3>
-                    <p class="venue-name">明治神宮</p>
-                    <p class="venue-address">〒151-8557 東京都渋谷区代々木神園町1-1</p>
-                    <p class="venue-access">JR代々木駅より徒歩5分</p>
-                </div>
-                <div class="venue-card">
-                    <h3><i class="fas fa-utensils"></i> 披露宴会場</h3>
-                    <p class="venue-name">明治記念館</p>
-                    <p class="venue-address">〒107-8507 東京都港区元赤阪2-2-23</p>
-                    <p class="venue-access">JR信濃町駅より徒歩3分</p>
-                </div>
-            </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827!2d139.6993!3d35.6764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca40296d2d1%3A0x9c2ef0d5c3d4c6e8!2z5piO5rK755We5a6u!5e0!3m2!1sja!2sjp!4v1640000000000"
-                    width="100%" 
-                    height="350" 
-                    style="border:0; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <div style="text-align: center; margin-top: 1rem;">
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">
-                        <i class="fas fa-map-marker-alt" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
-                        集合場所：明治神宮神楽殿控室<br>Meeting point: Kaguraden House, Meiji Shrine
-                    </p>
-                    <button class="map-button" onclick="openMap()">
-                        <i class="fas fa-external-link-alt"></i>
-                        Google Mapsで開く
-                    </button>
-                    <button class="map-button" onclick="openDirections()" style="margin-left: 0.5rem;">
-                        <i class="fas fa-route"></i>
-                        ルート検索
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="important-info">
-        <div class="container">
-            <h2 class="section-title">ご案内</h2>
-            <div class="info-cards">
-                <div class="info-card">
-                    <i class="fas fa-tshirt"></i>
-                    <h3>服装について</h3>
-                    <p>フォーマルな装いでお越しください</p>
-                    <a href="#dress-code" class="info-link">詳細を見る</a>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-car"></i>
-                    <h3>駐車場について</h3>
-                    <p>会場に駐車場をご用意しております</p>
-                    <a href="#parking" class="info-link">詳細を見る</a>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-gift"></i>
-                    <h3>ご祝儀について</h3>
-                    <p>お心遣いありがとうございます</p>
-                    <a href="#gift" class="info-link">詳細を見る</a>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-phone"></i>
+                <div class="contact-info">
                     <h3>お問い合わせ</h3>
-                    <p>ご不明な点がございましたら</p>
-                    <a href="#contact" class="info-link">連絡先</a>
+                    <p>ご不明な点がございましたら、お気軽にお声がけください。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="rsvp-section">
-        <div class="container">
-            <h2 class="section-title">出席のご連絡</h2>
-            <p class="rsvp-description">
-                恐れ入りますが、<strong>2026年5月15日</strong>までに<br>
-                下記フォームよりご出席の可否をお知らせください。
-            </p>
-            <div class="rsvp-buttons">
-                <button class="rsvp-btn primary" onclick="openRSVPForm()">
-                    <i class="fas fa-edit"></i>
-                    出席連絡フォーム
-                </button>
-                <button class="rsvp-btn secondary" onclick="openGoogleForm()">
-                    <i class="fab fa-google"></i>
-                    Google フォームで回答
-                </button>
-            </div>
-            <div class="rsvp-form-container" id="rsvpFormContainer" style="display: none;">
-                <form class="rsvp-form" id="rsvpForm">
-                    <div class="form-group">
-                        <label for="guestName">お名前 *</label>
-                        <input type="text" id="guestName" name="guestName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="attendance">出席 *</label>
-                        <select id="attendance" name="attendance" required>
-                            <option value="">選択してください</option>
-                            <option value="出席">出席</option>
-                            <option value="欠席">欠席</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="guestCount">人数</label>
-                        <select id="guestCount" name="guestCount">
-                            <option value="1">1名</option>
-                            <option value="2">2名</option>
-                            <option value="3">3名</option>
-                            <option value="4">4名以上</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="dietaryRestrictions">アレルギー・食事制限</label>
-                        <textarea id="dietaryRestrictions" name="dietaryRestrictions" rows="3" placeholder="特にない場合は「なし」とご記入ください"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">メッセージ</label>
-                        <textarea id="message" name="message" rows="4" placeholder="お祝いのメッセージがございましたらお聞かせください"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        送信する
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
+    <!-- フッター -->
     <footer class="footer">
         <div class="container">
-            <div class="couple-names-footer">
-                <span>Dana & Masashi</span>
+            <div class="footer-content">
+                <div class="couple-names-footer">
+                    <span>Masashi & Dana</span>
+                </div>
+                <div class="wedding-date-footer">
+                    <span>2026.09.26</span>
+                </div>
             </div>
-            <p class="wedding-date-footer">2026.09.26</p>
-            <p class="thank-you">皆様のご出席を心よりお待ちしております</p>
+            <div class="footer-pattern"></div>
         </div>
     </footer>
 
-    <script>
-        // 桜の花びらアニメーション
-function createSakuraPetal() {
-    const sakuraContainer = document.getElementById('sakuraContainer');
-    if (!sakuraContainer) return;
-    
-    const petal = document.createElement('div');
-    petal.className = 'sakura-petal';
-    petal.innerHTML = '🌸';
-    
-    // ランダムな位置とアニメーション設定
-    petal.style.left = Math.random() * 100 + '%';
-    petal.style.animationDuration = (Math.random() * 3 + 2) + 's';
-    petal.style.animationDelay = Math.random() * 2 + 's';
-    
-    sakuraContainer.appendChild(petal);
-    
-    // アニメーション終了後に要素を削除
-    setTimeout(() => {
-        if (petal.parentNode) {
-            petal.parentNode.removeChild(petal);
-        }
-    }, 5000);
-}
-
-// 桜の花びらを定期的に生成
-setInterval(createSakuraPetal, 800);
-
-// 和風ボタンスタイルの適用
-document.addEventListener('DOMContentLoaded', function() {
-    // 既存のボタンに和風スタイルを適用
-    const buttons = document.querySelectorAll('.map-button, .rsvp-btn, .submit-btn');
-    buttons.forEach(button => {
-        button.classList.add('japanese-button');
-    });
-    
-    // セクション間に和風区切りを追加
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section, index) => {
-        if (index > 0) {
-            const divider = document.createElement('div');
-            divider.className = 'japanese-divider';
-            section.parentNode.insertBefore(divider, section);
-        }
-    });
-});
-        const weddingDate = new Date(2026, 8, 26, 10, 40, 0).getTime();
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeLeft = weddingDate - now;
-            if (timeLeft > 0) {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                document.getElementById('days').textContent = days;
-                document.getElementById('hours').textContent = hours;
-                document.getElementById('minutes').textContent = minutes;
-                document.getElementById('seconds').textContent = seconds;
-            } else {
-                document.getElementById('countdown').innerHTML = '<div class="celebration">🎉 本日は結婚式です！ 🎉</div>';
-            }
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-        function openRSVPForm() {
-            const formContainer = document.getElementById('rsvpFormContainer');
-            if (formContainer.style.display === 'none' || formContainer.style.display === '') {
-                formContainer.style.display = 'block';
-                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } else {
-                formContainer.style.display = 'none';
-            }
-        }
-        function openGoogleForm() {
-            const googleFormUrl = 'https://forms.google.com/your-form-id';
-            window.open(googleFormUrl, '_blank');
-        }
-       function openMap() {
-           const address = '明治神宮神楽殿 東京都渋谷区代々木神園町1-1';
-           const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-           window.open(mapsUrl, '_blank');
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            const rsvpForm = document.getElementById('rsvpForm');
-            if (rsvpForm) {
-                rsvpForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const formData = new FormData(rsvpForm);
-                    const data = {};
-                    for (let [key, value] of formData.entries()) {
-                        data[key] = value;
-                    }
-                    console.log('RSVP Data:', data);
-                    showSuccessMessage();
-                    rsvpForm.reset();
-                    document.getElementById('rsvpFormContainer').style.display = 'none';
-                });
-            }
-        });
-        // 明治神宮神楽殿への道順案内
-        function openDirections() {
-            const destination = '明治神宮神楽殿 東京都渋谷区代々木神園町1-1';
-            const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
-            window.open(directionsUrl, '_blank');
-        }
-        function showSuccessMessage() {
-            const successDiv = document.createElement('div');
-            successDiv.className = 'success-message';
-            successDiv.innerHTML = `
-                <div style="
-                    background: #4CAF50;
-                    color: white;
-                    padding: 0;
-                    border-radius: 10px;
-                    text-align: center;
-                    margin: 0;
-                    max-width: 400px;
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                ">
-                    <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
-                    ご回答ありがとうございました！
-                </div>
-            `;
-            const rsvpSection = document.querySelector('.rsvp-section .container');
-            rsvpSection.appendChild(successDiv);
-            setTimeout(() => {
-                successDiv.remove();
-            }, 3000);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
