@@ -1150,60 +1150,14 @@ section {
     color: #2c2c2c; text-align: left;
 } 
 
-.letter-greeting { 
-    text-align: left; 
-    margin-bottom: 2rem; 
-    font-weight: 600; 
-    color: #333; 
-    font-size: 1.2rem; 
-} 
-
 .letter-text { 
     margin-bottom: 1.5rem; 
     text-indent: 1em; 
     color: #333; 
 } 
 
-.couple-names-letter { 
-    text-align: center; 
-    margin: 2.5rem 0; 
-    padding: 1.5rem; 
-    background: linear-gradient(135deg, #faf0e6 0%, #f5f5dc 100%); 
-    border-left: 4px solid #daa520; 
-    border-right: 4px solid #daa520; position: relative;
-}
-
-.couple-names-letter::before, .couple-names-letter::after { 
-    content: ''; 
-    position: absolute; 
-    top: 0; 
-    bottom: 0; 
-    width: 1px; 
-    background: #daa520; 
-}
-
-.couple-names-letter::before { 
-    left: 20px;
-} 
-
-.couple-names-letter::after { 
-    right: 20px;
-}
-
-.groom-name-letter, .bride-name-letter { 
-    font-family: 'Playfair Display', serif; 
-    font-size: 1.8rem; 
-    font-weight: 600; 
-    color: #8b4513; 
-    margin: 0.5rem 0; 
-    letter-spacing: 0.2em;
-} 
-
 .letter-closing { 
-    text-align: right; 
-    margin-top: 2.5rem; 
-    margin-bottom: 0; 
-    font-weight: 400; 
+    text-align: right;  
     color: #333; 
     font-size: 1rem; 
 }
@@ -1231,19 +1185,6 @@ section {
         font-size: 1rem; 
         line-height: 2; 
     } 
-    
-    .couple-names-letter { 
-        margin: 2rem 0; 
-        padding: 1rem; 
-    } 
-    
-    .groom-name-letter, .bride-name-letter { 
-        font-size: 1.5rem;
-    }
-    
-    .letter-greeting, .letter-closing { 
-        font-size: 1.1rem;
-    } 
 } 
 
 @media (max-width: 480px) { 
@@ -1256,15 +1197,6 @@ section {
     .letter-text { 
         text-indent: 0.8em; 
     } 
-    
-    .couple-names-letter { 
-        padding: 0.8rem;
-    } 
-    
-    .groom-name-letter, .bride-name-letter { 
-        font-size: 1.3rem; 
-        letter-spacing: 0.1em; 
-    }
     
     .letter-seal {
         right: 20px; 
