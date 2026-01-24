@@ -989,10 +989,11 @@ section {
         padding-left: 70px;
     }
 }
-/* Microsoft Forms埋め込みスタイル */
+* Microsoft Forms埋め込みスタイル */
 .forms-embed {
     text-align: center;
     color: #666;
+    width: 100%;
 }
 
 .forms-embed h3 {
@@ -1009,36 +1010,90 @@ section {
 }
 
 .forms-description strong {
-    color: #8b4513;
+    color: #daa520;
+    font-weight: 600;
 }
 
 .forms-iframe-container {
-    background: #f8f8f8;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+    background: linear-gradient(135deg, #faf0e6 0%, #f5f5dc 100%);
+    border: 2px solid #daa520;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.15);
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.forms-iframe-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #daa520, #cd853f);
+    border-radius: 15px 15px 0 0;
 }
 
 .forms-iframe-container iframe {
-    border-radius: 8px;
-    min-height: 600px;
+    border-radius: 10px;
+    min-height: 650px;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
 }
 
-/* レスポンシブ対応 */
+/* デスクトップ専用調整 */
+@media (min-width: 1024px) {
+    .forms-iframe-container {
+        max-width: 1000px;
+        padding: 3rem;
+    }
+    
+    .forms-iframe-container iframe {
+        min-height: 700px;
+    }
+}
+
+/* タブレット対応 */
+@media (max-width: 1023px) and (min-width: 769px) {
+    .forms-iframe-container {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .forms-iframe-container iframe {
+        min-height: 600px;
+    }
+}
+
+/* スマートフォン対応 */
 @media (max-width: 768px) {
     .forms-iframe-container {
-        padding: 0.5rem;
-        margin: 0 -20px;
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
     }
     
     .forms-iframe-container iframe {
         height: 500px;
+        border-radius: 8px;
     }
 }
 
 @media (max-width: 480px) {
+    .forms-iframe-container {
+        padding: 0.8rem;
+        margin: 0 auto;
+    }
+    
     .forms-iframe-container iframe {
         height: 450px;
     }
