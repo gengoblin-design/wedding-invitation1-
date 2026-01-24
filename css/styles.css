@@ -335,6 +335,18 @@ section {
 
 .map-container {
     text-align: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.map-container iframe {
+    transition: transform 0.3s ease;
+}
+
+.map-container iframe:hover {
+    transform: scale(1.02);
 }
 
 .map-placeholder {
