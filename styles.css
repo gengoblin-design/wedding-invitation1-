@@ -857,8 +857,9 @@ section {
     }
     
     .main-nav a {
-        padding: 0.8rem 1rem;
+        padding: 0.4rem 1rem;
         text-align: center;
+        font-size: 0.9rem;
     }
     
     .section-title {
