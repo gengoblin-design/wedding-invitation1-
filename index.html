@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>結婚式のご招待 - Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #c9302c;      /* 朱色 */
-            --secondary-color: #8b4513;    /* 茶色 */
-            --accent-color: #f5f5dc;       /* 和紙色 */
-            --gold-color: #ffd700;         /* 金色 */
-            --sakura-pink: #ffb7c5;        /* 桜色 */
-            --text-dark: #2c2c2c;
-            --text-light: #666;
-            --bg-light: #faf8f5;
-            --white: #ffffff;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        }
+       :root {
+    --primary-color: #c9302c;      /* 朱色（神社の鳥居色） */
+    --secondary-color: #8b4513;    /* 茶色（木材色） */
+    --accent-color: #f5f5dc;       /* 和紙色 */
+    --gold-color: #ffd700;         /* 金色（装飾用） */
+    --sakura-pink: #ffb7c5;        /* 桜色 */
+    --deep-green: #2d5016;         /* 深緑（松の色） */
+    --text-dark: #2c2c2c;
+    --text-light: #666;
+    --bg-light: #faf8f5;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--gold-color));
+}
         * {
             margin: 0;
             padding: 0;
@@ -927,9 +928,176 @@
         height: 120px;
     }
 }
+        /* =========================
+   和風装飾要素
+========================= */
+
+/* 桜の花びらアニメーション */
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sakura-petal {
+    position: absolute;
+    color: var(--sakura-pink);
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 和風セクション区切り */
+.japanese-divider {
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--gold-color), 
+        var(--primary-color), 
+        var(--gold-color), 
+        transparent
+    );
+    margin: 3rem 0;
+    position: relative;
+}
+
+.japanese-divider::before {
+    content: '🌸';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-light);
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+/* 和風カードの装飾 */
+.japanese-card {
+    position: relative;
+    background: linear-gradient(135deg, var(--bg-light), var(--accent-color));
+    border: 2px solid var(--gold-color);
+}
+
+.japanese-card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, var(--gold-color), transparent);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+/* 鳥居アイコンの強調 */
+.fa-torii-gate {
+    color: var(--primary-color) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 1.3em !important;
+}
+
+/* 和風ボタンスタイル */
+.japanese-button {
+    background: linear-gradient(135deg, var(--primary-color), var(--gold-color));
+    border: 2px solid var(--gold-color);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.japanese-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.japanese-button:hover::before {
+    left: 100%;
+}
+
+/* セクションタイトルの和風装飾 */
+.section-title {
+    font-family: 'Shippori Mincho', serif;
+    position: relative;
+}
+
+.section-title::before {
+    content: '🌸';
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.section-title::after {
+    background: linear-gradient(90deg, var(--primary-color), var(--gold-color), var(--primary-color));
+}
+
+/* ヒーローセクションの和風オーバーレイ */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(201, 48, 44, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    z-index: 1;
+}
+
+/* プロフィールカードの和風装飾 */
+.profile-card {
+    background: linear-gradient(135deg, var(--bg-light), var(--accent-color));
+    border: 1px solid var(--gold-color);
+}
+
+.profile-card::before {
+    background: linear-gradient(90deg, var(--primary-color), var(--gold-color));
+}
+
+/* 前撮り写真セクションの和風装飾 */
+.japanese-style {
+    background: linear-gradient(135deg, var(--accent-color), var(--bg-light));
+    border: 2px solid var(--primary-color);
+}
+
+.western-style {
+    background: linear-gradient(135deg, var(--bg-light), var(--accent-color));
+    border: 2px solid var(--gold-color);
+}
     </style>
 </head>
 <body>
+    <!-- 桜の花びらアニメーション -->
+    <div class="sakura-container" id="sakuraContainer"></div>
+    <header class="hero-section">
     <header class="hero-section">
         <div class="hero-content">
             <div class="couple-names">
@@ -1314,6 +1482,51 @@
     </footer>
 
     <script>
+        // 桜の花びらアニメーション
+function createSakuraPetal() {
+    const sakuraContainer = document.getElementById('sakuraContainer');
+    if (!sakuraContainer) return;
+    
+    const petal = document.createElement('div');
+    petal.className = 'sakura-petal';
+    petal.innerHTML = '🌸';
+    
+    // ランダムな位置とアニメーション設定
+    petal.style.left = Math.random() * 100 + '%';
+    petal.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    petal.style.animationDelay = Math.random() * 2 + 's';
+    
+    sakuraContainer.appendChild(petal);
+    
+    // アニメーション終了後に要素を削除
+    setTimeout(() => {
+        if (petal.parentNode) {
+            petal.parentNode.removeChild(petal);
+        }
+    }, 5000);
+}
+
+// 桜の花びらを定期的に生成
+setInterval(createSakuraPetal, 800);
+
+// 和風ボタンスタイルの適用
+document.addEventListener('DOMContentLoaded', function() {
+    // 既存のボタンに和風スタイルを適用
+    const buttons = document.querySelectorAll('.map-button, .rsvp-btn, .submit-btn');
+    buttons.forEach(button => {
+        button.classList.add('japanese-button');
+    });
+    
+    // セクション間に和風区切りを追加
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        if (index > 0) {
+            const divider = document.createElement('div');
+            divider.className = 'japanese-divider';
+            section.parentNode.insertBefore(divider, section);
+        }
+    });
+});
         const weddingDate = new Date(2026, 8, 26, 10, 40, 0).getTime();
         function updateCountdown() {
             const now = new Date().getTime();
