@@ -1,1 +1,146 @@
-{ "role": "user", "content": "<tool_result> <read-file> ToolResult(success=True, output='// 結婚式の日付を設定（年, 月-1, 日, 時, 分, 秒）\nconst weddingDate = new Date(2026, 5, 15, 14, 0, 0).getTime(); // 2026年6月15日 14:00\n\n// カウントダウンタイマー\nfunction updateCountdown() {\n const now = new Date().getTime();\n const timeLeft = weddingDate - now;\n\n if (timeLeft > 0) {\n const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));\n const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));\n const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);\n\n document.getElementById(\'days\').textContent = days;\n document.getElementById(\'hours\').textContent = hours;\n document.getElementById(\'minutes\').textContent = minutes;\n document.getElementById(\'seconds\').textContent = seconds;\n } else {\n // 結婚式当日になった場合\n document.getElementById(\'countdown\').innerHTML = \'<div class="celebration">🎉 本日は結婚式です！ 🎉</div>\';\n }\n}\n\n// 1秒ごとにカウントダウンを更新\nsetInterval(updateCountdown, 1000);\n\n// 初回実行\nupdateCountdown();\n\n// スムーズスクロール\ndocument.addEventListener(\'DOMContentLoaded\', function() {\n // スクロールインジケーターのクリックイベント\n const scrollIndicator = document.querySelector(\'.scroll-indicator\');\n if (scrollIndicator) {\n scrollIndicator.addEventListener(\'click\', function() {\n document.querySelector(\'.couple-photos\').scrollIntoView({\n behavior: \'smooth\'\n });\n });\n }\n\n // フェードインアニメーション\n const observerOptions = {\n threshold: 0.1,\n rootMargin: \'0px 0px -50px 0px\'\n };\n\n const observer = new IntersectionObserver(function(entries) {\n entries.forEach(entry => {\n if (entry.isIntersecting) {\n entry.target.classList.add(\'visible\');\n }\n });\n }, observerOptions);\n\n // アニメーション対象の要素を監視\n const animateElements = document.querySelectorAll(\'.section-title, .photo-card, .timeline-item, .venue-card, .info-card\');\n animateElements.forEach(el => {\n el.classList.add(\'fade-in\');\n observer.observe(el);\n });\n});\n\n// RSVP フォーム関連\nfunction openRSVPForm() {\n const formContainer = document.getElementById(\'rsvpFormContainer\');\n if (formContainer.style.display === \'none\' || formContainer.style.display === \'\') {\n formContainer.style.display = \'block\';\n formContainer.scrollIntoView({ behavior: \'smooth\', block: \'center\' });\n } else {\n formContainer.style.display = \'none\';\n }\n}\n\nfunction openGoogleForm() {\n // Google Formsのリンクを開く（実際のURLに置き換えてください）\n const googleFormUrl = \'https://forms.google.com/your-form-id\\';\\n window.open(googleFormUrl, \'_blank\');\n}\n\n// Google Mapsを開く\nfunction openMap() {\n // 実際の会場の住所に置き換えてください\n const address = \'東京都千代田区千代田1-1\';\n const mapsUrl = https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)};\n window.open(mapsUrl, \'_blank\');\n}\n\n// RSVP フォーム送信処理\ndocument.addEventListener(\'DOMContentLoaded\', function() {\n const rsvpForm = document.getElementById(\'rsvpForm\');\n if (rsvpForm) {\n rsvpForm.addEventListener(\'submit\', function(e) {\n e.preventDefault();\n \n // フォームデータを取得\n const formData = new FormData(rsvpForm);\n const data = {};\n for (let [key, value] of formData.entries()) {\n data[key] = value;\n }\n \n // ここでフォームデータを処理\n console.log(\'RSVP Data:\', data);\n \n // 成功メッセージを表示\n showSuccessMessage();\n \n // フォームをリセット\n rsvpForm.reset();\n \n // フォームを非表示\n document.getElementById(\'rsvpFormContainer\').style.display = \'none\';\n });\n }\n});\n\nfunction showSuccessMessage() {\n // 成功メッセージを表示\n const successDiv = document.createElement(\'div\');\n successDiv.className = \'success-message\';\n successDiv.innerHTML = \\n <div style=\"\\n background: #4CAF50;\\n color: white;\\n padding: 1rem 2rem;\\n border-radius: 10px;\\n text-align: center;\\n margin: 2rem auto;\\n max-width: 400px;\\n box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);\\n \">\\n <i class=\"fas fa-check-circle\" style=\"margin-right: 0.5rem;\"></i>\\n ご回答ありがとうございました！\\n </div>\\n ;\n \n const rsvpSection = document.querySelector(\'.rsvp-section .container\');\n rsvpSection.appendChild(successDiv);\n \n // 3秒後にメッセージを削除\n setTimeout(() => {\n successDiv.remove();\n }, 3000);\n}\n\n// パララックス効果（オプション）\nwindow.addEventListener(\'scroll\', function() {\n const scrolled = window.pageYOffset;\n const heroSection = document.querySelector(\'.hero-section\');\n \n if (heroSection) {\n const rate = scrolled * -0.5;\n heroSection.style.transform = translateY(${rate}px);\n }\n});\n\n// モバイルメニュー（必要に応じて）\nfunction toggleMobileMenu() {\n const mobileMenu = document.querySelector(\'.mobile-menu\');\n if (mobileMenu) {\n mobileMenu.classList.toggle(\'active\');\n }\n}\n\n// 画像の遅延読み込み（オプション）\nfunction lazyLoadImages() {\n const images = document.querySelectorAll(\'img[data-src]\');\n const imageObserver = new IntersectionObserver((entries, observer) => {\n entries.forEach(entry => {\n if (entry.isIntersecting) {\n const img = entry.target;\n img.src = img.dataset.src;\n img.classList.remove(\'lazy\');\n imageObserver.unobserve(img);\n }\n });\n });\n\n images.forEach(img => imageObserver.observe(img));\n}\n\n// ページ読み込み完了時の処理\nwindow.addEventListener(\'load\', function() {\n // 遅延読み込みを初期化\n lazyLoadImages();\n \n // ローディングアニメーションを非表示（必要に応じて）\n const loader = document.querySelector(\'.loader\');\n if (loader) {\n loader.style.display = \'none\';\n }\n});\n\n// エラーハンドリング\nwindow.addEventListener(\'error\', function(e) {\n console.error(\'JavaScript Error:\', e.error);\n});\n\n// Google Analytics（必要に応じて）\nfunction trackEvent(eventName, eventData = {}) {\n if (typeof gtag !== \'undefined\') {\n gtag(\'event\', eventName, eventData);\n }\n}\n\n// RSVP ボタンクリックの追跡\ndocument.addEventListener(\'click\', function(e) {\n if (e.target.classList.contains(\'rsvp-btn\')) {\n trackEvent(\'rsvp_button_click\', {\n button_type: e.target.classList.contains(\'primary\') ? \'form\' : \'google\'\n });\n }\n});\n\n// ソーシャルシェア機能（オプション）\nfunction shareOnSocial(platform) {\n const url = encodeURIComponent(window.location.href);\n const text = encodeURIComponent(\'花子 & 太郎の結婚式にご招待いたします！\');\n \n let shareUrl = \'\';\n \n switch (platform) {\n case \'twitter\':\n shareUrl = https://twitter.com/intent/tweet?url=${url}&text=${text};\n break;\n case \'facebook\':\n shareUrl = https://www.facebook.com/sharer/sharer.php?u=${url};\n break;\n case \'line\':\n shareUrl = https://social-plugins.line.me/lineit/share?url=${url};\n break;\n }\n \n if (shareUrl) {\n window.open(shareUrl, \'_blank\', \'width=600,height=400\');\n }\n}\n\n// PWA対応（オプション）\nif (\'serviceWorker\' in navigator) {\n window.addEventListener(\'load\', function() {\n navigator.serviceWorker.register(\'/sw.js\')\n .then(function(registration) {\n console.log(\'ServiceWorker registration successful\');\n })\n .catch(function(err) {\n console.log(\'ServiceWorker registration failed\');\n });\n });\n}\n\n// 印刷対応\nfunction printInvitation() {\n window.print();\n}\n\n// QRコード生成（必要に応じて）\nfunction generateQRCode() {\n const qrCodeContainer = document.getElementById(\'qrcode\');\n if (qrCodeContainer && typeof QRCode !== \'undefined\') {\n new QRCode(qrCodeContainer, {\n text: window.location.href,\n width: 128,\n height: 128\n });\n }\n}\n\n// 多言語対応（オプション）\nconst translations = {\n ja: {\n \'rsvp_success\': \'ご回答ありがとうございました！\',\n \'loading\': \'読み込み中...\',\n \'error\': \'エラーが発生しました\'\n },\n en: {\n \'rsvp_success\': \'Thank you for your response!\',\n \'loading\': \'Loading...\',\n \'error\': \'An error occurred\'\n }\n};\n\nfunction translate(key, lang = \'ja\') {\n return translations[lang] && translations[lang][key] ? translations[lang][key] : key;\n}') </read-file> </tool_result>" }
+// 結婚式の日付を設定（年, 月-1, 日, 時, 分, 秒）
+const weddingDate = new Date(2026, 5, 15, 14, 0, 0).getTime(); // 2026年6月15日 14:00
+
+// カウントダウンタイマー
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = weddingDate - now;
+
+    if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+        document.getElementById('seconds').textContent = seconds;
+    } else {
+        // 結婚式当日になった場合
+        document.getElementById('countdown').innerHTML = '<div class="celebration">🎉 本日は結婚式です！ 🎉</div>';
+    }
+}
+
+// 1秒ごとにカウントダウンを更新
+setInterval(updateCountdown, 1000);
+
+// 初回実行
+updateCountdown();
+
+// スムーズスクロール
+document.addEventListener('DOMContentLoaded', function() {
+    // スクロールインジケーターのクリックイベント
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            document.querySelector('.couple-photos').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // フェードインアニメーション
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // アニメーション対象の要素を監視
+    const animateElements = document.querySelectorAll('.section-title, .photo-card, .timeline-item, .venue-card, .info-card');
+    animateElements.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+});
+
+// RSVP フォーム関連
+function openRSVPForm() {
+    const formContainer = document.getElementById('rsvpFormContainer');
+    if (formContainer.style.display === 'none' || formContainer.style.display === '') {
+        formContainer.style.display = 'block';
+        formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        formContainer.style.display = 'none';
+    }
+}
+
+function openGoogleForm() {
+    // Google Formsのリンクを開く（実際のURLに置き換えてください）
+    const googleFormUrl = 'https://forms.google.com/your-form-id';
+    window.open(googleFormUrl, '_blank');
+}
+
+// Google Mapsを開く
+function openMap() {
+    // 実際の会場の住所に置き換えてください
+    const address = '東京都千代田区千代田1-1';
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    window.open(mapsUrl, '_blank');
+}
+
+// RSVP フォーム送信処理
+document.addEventListener('DOMContentLoaded', function() {
+    const rsvpForm = document.getElementById('rsvpForm');
+    if (rsvpForm) {
+        rsvpForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // フォームデータを取得
+            const formData = new FormData(rsvpForm);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // ここでフォームデータを処理
+            console.log('RSVP Data:', data);
+            
+            // 成功メッセージを表示
+            showSuccessMessage();
+            
+            // フォームをリセット
+            rsvpForm.reset();
+            
+            // フォームを非表示
+            document.getElementById('rsvpFormContainer').style.display = 'none';
+        });
+    }
+});
+
+function showSuccessMessage() {
+    // 成功メッセージを表示
+    const successDiv = document.createElement('div');
+    successDiv.className = 'success-message';
+    successDiv.innerHTML = `
+        <div style="
+            background: #4CAF50;
+            color: white;
+            padding: 0;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0;
+            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        ">
+            <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
+            ご回答ありがとうございました！
+        </div>
+    `;
+    
+    const rsvpSection = document.querySelector('.rsvp-section .container');
+    rsvpSection.appendChild(successDiv);
+    
+    // 3秒後にメッセージを削除
+    setTimeout(() => {
+        successDiv.remove();
+    }, 3000);
+}
