@@ -1098,3 +1098,182 @@ section {
         height: 450px;
     }
 }
+ /* 手紙風メッセージセクション */ 
+.letter-section { 
+    background: linear-gradient(135deg, #f5f5dc 0%, #faf0e6 100%); 
+    padding: 4rem 0; 
+} 
+
+.letter-container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    background: #ffffff; 
+    border-radius: 0; 
+    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15); 
+    position: relative; 
+    overflow: hidden; 
+} 
+
+.letter-header { 
+    background: linear-gradient(90deg, #daa520, #cd853f); 
+    height: 8px; 
+    position: relative;
+} 
+
+.letter-seal { 
+    position: absolute; 
+    top: -15px; 
+    right: 30px; 
+    width: 30px; 
+    height: 30px; 
+    background: #8b4513; 
+    border-radius: 50%; 
+    border: 3px solid #daa520; 
+    box-shadow: 0 3px 10px rgba(139, 69, 19, 0.3);
+} 
+
+.letter-seal::before { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 12px; 
+    height: 12px; 
+    background: #daa520; 
+    border-radius: 50%; 
+} 
+
+.letter-content {
+    padding: 3rem 4rem; 
+    line-height: 2.2; 
+    font-size: 1.1rem; 
+    color: #2c2c2c; text-align: left;
+} 
+
+.letter-greeting { 
+    text-align: right; 
+    margin-bottom: 2rem; 
+    font-weight: 600; 
+    color: #8b4513; 
+    font-size: 1.2rem; 
+} 
+
+.letter-text { 
+    margin-bottom: 1.5rem; 
+    text-indent: 1em; 
+    color: #333; 
+} 
+
+.couple-names-letter { 
+    text-align: center; 
+    margin: 2.5rem 0; 
+    padding: 1.5rem; 
+    background: linear-gradient(135deg, #faf0e6 0%, #f5f5dc 100%); 
+    border-left: 4px solid #daa520; 
+    border-right: 4px solid #daa520; position: relative;
+}
+
+.couple-names-letter::before, .couple-names-letter::after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 1px; 
+    background: #daa520; 
+}
+
+.couple-names-letter::before { 
+    left: 20px;
+} 
+
+.couple-names-letter::after { 
+    right: 20px;
+}
+
+.groom-name-letter, .bride-name-letter { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.8rem; 
+    font-weight: 600; 
+    color: #8b4513; 
+    margin: 0.5rem 0; 
+    letter-spacing: 0.2em;
+} 
+
+.letter-closing { 
+    text-align: right; 
+    margin-top: 2.5rem; 
+    margin-bottom: 0; 
+    font-weight: 600; 
+    color: #8b4513; 
+    font-size: 1.2rem; 
+}
+
+.letter-footer { 
+    background: linear-gradient(90deg, #cd853f, #daa520); 
+    height: 8px; 
+    position: relative; 
+}
+
+.letter-decoration { 
+    position: absolute; 
+    bottom: -10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 60px; height: 20px; 
+    background: #8b4513; 
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%); 
+} 
+
+/* レスポンシブ対応 */ 
+@media (max-width: 768px) { 
+    .letter-content { 
+        padding: 2rem 2rem; 
+        font-size: 1rem; 
+        line-height: 2; 
+    } 
+    
+    .couple-names-letter { 
+        margin: 2rem 0; 
+        padding: 1rem; 
+    } 
+    
+    .groom-name-letter, .bride-name-letter { 
+        font-size: 1.5rem;
+    }
+    
+    .letter-greeting, .letter-closing { 
+        font-size: 1.1rem;
+    } 
+} 
+
+@media (max-width: 480px) { 
+    .letter-content { 
+        padding: 1.5rem 1.5rem; 
+        font-size: 0.95rem; 
+        line-height: 1.9;
+    }
+    
+    .letter-text { 
+        text-indent: 0.8em; 
+    } 
+    
+    .couple-names-letter { 
+        padding: 0.8rem;
+    } 
+    
+    .groom-name-letter, .bride-name-letter { 
+        font-size: 1.3rem; 
+        letter-spacing: 0.1em; 
+    }
+    
+    .letter-seal {
+        right: 20px; 
+        width: 25px;
+        height: 25px; 
+    }
+    
+    .letter-seal::before {
+        width: 10px;
+        height: 10px;
+    } 
+}
