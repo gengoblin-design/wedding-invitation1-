@@ -989,3 +989,57 @@ section {
         padding-left: 70px;
     }
 }
+/* Microsoft Forms埋め込みスタイル */
+.forms-embed {
+    text-align: center;
+    color: #666;
+}
+
+.forms-embed h3 {
+    color: #8b4513;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.forms-description {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.forms-description strong {
+    color: #8b4513;
+}
+
+.forms-iframe-container {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.forms-iframe-container iframe {
+    border-radius: 8px;
+    min-height: 600px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .forms-iframe-container {
+        padding: 0.5rem;
+        margin: 0 -20px;
+    }
+    
+    .forms-iframe-container iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .forms-iframe-container iframe {
+        height: 450px;
+    }
+}
