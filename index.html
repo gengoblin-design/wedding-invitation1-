@@ -1,1 +1,815 @@
-{ "role": "user", "content": "<tool_result> <read-file> ToolResult(success=True, output='<!DOCTYPE html>\n<html lang="ja">\n<head>\n <meta charset="UTF-8">\n <meta name="viewport" content="width=device-width, initial-scale=1.0">\n <title>結婚式のご招待 - Wedding Invitation</title>\n <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Dancing+Script:wght@400;600;700&display=swap\" rel="stylesheet">\n <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\">\\n \n <style>\n /* CSS Variables /\n :root {\n --primary-color: #d4af37;\n --secondary-color: #8b7355;\n --accent-color: #f4e4bc;\n --text-dark: #2c2c2c;\n --text-light: #666;\n --bg-light: #faf8f5;\n --white: #ffffff;\n --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);\n --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));\n }\n\n / Reset and Base Styles /\n * {\n margin: 0;\n padding: 0;\n box-sizing: border-box;\n }\n\n body {\n font-family: \'Noto Serif JP\', serif;\n line-height: 1.6;\n color: var(--text-dark);\n background-color: var(--bg-light);\n overflow-x: hidden;\n }\n\n .container {\n max-width: 1200px;\n margin: 0 auto;\n padding: 0 20px;\n }\n\n / Hero Section /\n .hero-section {\n height: 100vh;\n background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),\n url(\'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80\\');\\n background-size: cover;\n background-position: center;\n background-attachment: fixed;\n display: flex;\n align-items: center;\n justify-content: center;\n text-align: center;\n color: var(--white);\n position: relative;\n }\n\n .hero-overlay {\n position: absolute;\n top: 0;\n left: 0;\n right: 0;\n bottom: 0;\n background: rgba(0, 0, 0, 0.3);\n }\n\n .hero-content {\n position: relative;\n z-index: 2;\n animation: fadeInUp 1.5s ease-out;\n }\n\n .couple-names {\n font-family: \'Dancing Script\', cursive;\n font-size: 4rem;\n font-weight: 700;\n margin-bottom: 1rem;\n text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);\n }\n\n .bride-name, .groom-name {\n color: var(--primary-color);\n }\n\n .ampersand {\n color: var(--white);\n margin: 0 1rem;\n font-size: 3rem;\n }\n\n .wedding-date {\n font-size: 1.5rem;\n margin-bottom: 1rem;\n letter-spacing: 2px;\n }\n\n .invitation-text {\n font-size: 1.1rem;\n margin-bottom: 3rem;\n opacity: 0.9;\n }\n\n / Countdown Timer /\n .countdown-container {\n margin-top: 2rem;\n }\n\n .countdown-container h3 {\n font-size: 1.2rem;\n margin-bottom: 1rem;\n color: var(--accent-color);\n }\n\n .countdown-timer {\n display: flex;\n justify-content: center;\n gap: 2rem;\n flex-wrap: wrap;\n }\n\n .time-unit {\n text-align: center;\n background: rgba(255, 255, 255, 0.1);\n padding: 1rem;\n border-radius: 10px;\n backdrop-filter: blur(10px);\n border: 1px solid rgba(255, 255, 255, 0.2);\n min-width: 80px;\n }\n\n .time-number {\n display: block;\n font-size: 2rem;\n font-weight: 600;\n color: var(--primary-color);\n }\n\n .time-label {\n font-size: 0.9rem;\n color: var(--white);\n opacity: 0.8;\n }\n\n .scroll-indicator {\n position: absolute;\n bottom: 2rem;\n left: 50%;\n transform: translateX(-50%);\n animation: bounce 2s infinite;\n font-size: 1.5rem;\n color: var(--white);\n opacity: 0.7;\n }\n\n / Section Styles /\n section {\n padding: 5rem 0;\n }\n\n .section-title {\n text-align: center;\n font-size: 2.5rem;\n margin-bottom: 3rem;\n color: var(--text-dark);\n position: relative;\n }\n\n .section-title::after {\n content: \'\';\n position: absolute;\n bottom: -10px;\n left: 50%;\n transform: translateX(-50%);\n width: 60px;\n height: 3px;\n background: var(--gradient);\n border-radius: 2px;\n }\n\n / Couple Photos Section /\n .couple-photos {\n background: var(--white);\n }\n\n .photos-grid {\n display: grid;\n grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n gap: 2rem;\n margin-bottom: 3rem;\n }\n\n .photo-card {\n border-radius: 15px;\n overflow: hidden;\n box-shadow: var(--shadow);\n transition: transform 0.3s ease;\n }\n\n .photo-card:hover {\n transform: translateY(-5px);\n }\n\n .photo-placeholder {\n height: 300px;\n background: var(--accent-color);\n display: flex;\n flex-direction: column;\n align-items: center;\n justify-content: center;\n color: var(--text-light);\n }\n\n .photo-placeholder i {\n font-size: 3rem;\n margin-bottom: 1rem;\n color: var(--primary-color);\n }\n\n .story-text {\n text-align: center;\n max-width: 600px;\n margin: 0 auto;\n font-size: 1.1rem;\n line-height: 1.8;\n color: var(--text-light);\n }\n\n .story-text p {\n margin-bottom: 1rem;\n }\n\n / Ceremony Schedule /\n .ceremony-schedule {\n background: var(--bg-light);\n }\n\n .schedule-timeline {\n max-width: 800px;\n margin: 0 auto;\n position: relative;\n }\n\n .schedule-timeline::before {\n content: \'\';\n position: absolute;\n left: 50%;\n top: 0;\n bottom: 0;\n width: 2px;\n background: var(--primary-color);\n transform: translateX(-50%);\n }\n\n .timeline-item {\n display: flex;\n align-items: center;\n margin-bottom: 3rem;\n position: relative;\n }\n\n .timeline-item:nth-child(odd) {\n flex-direction: row-reverse;\n }\n\n .timeline-time {\n background: var(--gradient);\n color: var(--white);\n padding: 0.5rem 1rem;\n border-radius: 20px;\n font-weight: 600;\n min-width: 80px;\n text-align: center;\n position: relative;\n z-index: 2;\n }\n\n .timeline-content {\n flex: 1;\n background: var(--white);\n padding: 1.5rem;\n border-radius: 10px;\n box-shadow: var(--shadow);\n margin: 0 2rem;\n }\n\n .timeline-content h3 {\n color: var(--primary-color);\n margin-bottom: 0.5rem;\n font-size: 1.2rem;\n }\n\n .timeline-content p {\n color: var(--text-light);\n }\n\n / Venue Info /\n .venue-info {\n background: var(--white);\n }\n\n .venue-details {\n display: grid;\n grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n gap: 2rem;\n margin-bottom: 3rem;\n }\n\n .venue-card {\n background: var(--bg-light);\n padding: 2rem;\n border-radius: 15px;\n text-align: center;\n box-shadow: var(--shadow);\n transition: transform 0.3s ease;\n }\n\n .venue-card:hover {\n transform: translateY(-5px);\n }\n\n .venue-card h3 {\n color: var(--primary-color);\n margin-bottom: 1rem;\n font-size: 1.3rem;\n }\n\n .venue-card h3 i {\n margin-right: 0.5rem;\n }\n\n .venue-name {\n font-size: 1.2rem;\n font-weight: 600;\n margin-bottom: 0.5rem;\n color: var(--text-dark);\n }\n\n .venue-address, .venue-access {\n color: var(--text-light);\n margin-bottom: 0.5rem;\n }\n\n .map-container {\n text-align: center;\n }\n\n .map-placeholder {\n height: 300px;\n background: var(--accent-color);\n border-radius: 15px;\n display: flex;\n flex-direction: column;\n align-items: center;\n justify-content: center;\n color: var(--text-light);\n }\n\n .map-placeholder i {\n font-size: 3rem;\n margin-bottom: 1rem;\n color: var(--primary-color);\n }\n\n .map-button {\n background: var(--gradient);\n color: var(--white);\n border: none;\n padding: 0.8rem 1.5rem;\n border-radius: 25px;\n cursor: pointer;\n font-size: 1rem;\n margin-top: 1rem;\n transition: transform 0.3s ease;\n }\n\n .map-button:hover {\n transform: translateY(-2px);\n }\n\n .map-button i {\n margin-right: 0.5rem;\n }\n\n / Important Info /\n .important-info {\n background: var(--bg-light);\n }\n\n .info-cards {\n display: grid;\n grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n gap: 2rem;\n }\n\n .info-card {\n background: var(--white);\n padding: 2rem;\n border-radius: 15px;\n text-align: center;\n box-shadow: var(--shadow);\n transition: transform 0.3s ease;\n }\n\n .info-card:hover {\n transform: translateY(-5px);\n }\n\n .info-card i {\n font-size: 2.5rem;\n color: var(--primary-color);\n margin-bottom: 1rem;\n }\n\n .info-card h3 {\n margin-bottom: 1rem;\n color: var(--text-dark);\n }\n\n .info-card p {\n color: var(--text-light);\n margin-bottom: 1rem;\n }\n\n .info-link {\n color: var(--primary-color);\n text-decoration: none;\n font-weight: 600;\n transition: color 0.3s ease;\n }\n\n .info-link:hover {\n color: var(--secondary-color);\n }\n\n / RSVP Section /\n .rsvp-section {\n background: var(--white);\n }\n\n .rsvp-description {\n text-align: center;\n font-size: 1.1rem;\n margin-bottom: 3rem;\n color: var(--text-light);\n }\n\n .rsvp-buttons {\n display: flex;\n justify-content: center;\n gap: 1rem;\n margin-bottom: 3rem;\n flex-wrap: wrap;\n }\n\n .rsvp-btn {\n padding: 1rem 2rem;\n border: none;\n border-radius: 25px;\n font-size: 1rem;\n cursor: pointer;\n transition: all 0.3s ease;\n display: flex;\n align-items: center;\n gap: 0.5rem;\n }\n\n .rsvp-btn.primary {\n background: var(--gradient);\n color: var(--white);\n }\n\n .rsvp-btn.secondary {\n background: transparent;\n color: var(--primary-color);\n border: 2px solid var(--primary-color);\n }\n\n .rsvp-btn:hover {\n transform: translateY(-2px);\n box-shadow: var(--shadow);\n }\n\n / RSVP Form /\n .rsvp-form-container {\n max-width: 600px;\n margin: 0 auto;\n background: var(--bg-light);\n padding: 2rem;\n border-radius: 15px;\n box-shadow: var(--shadow);\n }\n\n .form-group {\n margin-bottom: 1.5rem;\n }\n\n .form-group label {\n display: block;\n margin-bottom: 0.5rem;\n color: var(--text-dark);\n font-weight: 600;\n }\n\n .form-group input,\n .form-group select,\n .form-group textarea {\n width: 100%;\n padding: 0.8rem;\n border: 2px solid #ddd;\n border-radius: 8px;\n font-size: 1rem;\n transition: border-color 0.3s ease;\n }\n\n .form-group input:focus,\n .form-group select:focus,\n .form-group textarea:focus {\n outline: none;\n border-color: var(--primary-color);\n }\n\n .submit-btn {\n background: var(--gradient);\n color: var(--white);\n border: none;\n padding: 1rem 2rem;\n border-radius: 25px;\n font-size: 1rem;\n cursor: pointer;\n width: 100%;\n display: flex;\n align-items: center;\n justify-content: center;\n gap: 0.5rem;\n transition: transform 0.3s ease;\n }\n\n .submit-btn:hover {\n transform: translateY(-2px);\n }\n\n / Footer /\n .footer {\n background: var(--text-dark);\n color: var(--white);\n padding: 3rem 0;\n text-align: center;\n }\n\n .couple-names-footer {\n font-family: \'Dancing Script\', cursive;\n font-size: 2rem;\n color: var(--primary-color);\n margin-bottom: 1rem;\n }\n\n .wedding-date-footer {\n font-size: 1.2rem;\n margin-bottom: 1rem;\n letter-spacing: 2px;\n }\n\n .thank-you {\n color: var(--accent-color);\n font-style: italic;\n }\n\n / Animations /\n @keyframes fadeInUp {\n from {\n opacity: 0;\n transform: translateY(30px);\n }\n to {\n opacity: 1;\n transform: translateY(0);\n }\n }\n\n @keyframes bounce {\n 0%, 20%, 50%, 80%, 100% {\n transform: translateX(-50%) translateY(0);\n }\n 40% {\n transform: translateX(-50%) translateY(-10px);\n }\n 60% {\n transform: translateX(-50%) translateY(-5px);\n }\n }\n\n / Responsive Design /\n @media (max-width: 768px) {\n .couple-names {\n font-size: 2.5rem;\n }\n \n .ampersand {\n font-size: 2rem;\n margin: 0 0.5rem;\n }\n \n .countdown-timer {\n gap: 1rem;\n }\n \n .time-unit {\n min-width: 60px;\n padding: 0.8rem;\n }\n \n .time-number {\n font-size: 1.5rem;\n }\n \n .section-title {\n font-size: 2rem;\n }\n \n .timeline-item {\n flex-direction: column !important;\n text-align: center;\n }\n \n .timeline-content {\n margin: 1rem 0;\n }\n \n .schedule-timeline::before {\n display: none;\n }\n \n .rsvp-buttons {\n flex-direction: column;\n align-items: center;\n }\n \n .rsvp-btn {\n width: 100%;\n max-width: 300px;\n justify-content: center;\n }\n }\n\n @media (max-width: 480px) {\n .container {\n padding: 0 15px;\n }\n \n section {\n padding: 3rem 0;\n }\n \n .couple-names {\n font-size: 2rem;\n }\n \n .photos-grid {\n grid-template-columns: 1fr;\n }\n \n .venue-details {\n grid-template-columns: 1fr;\n }\n \n .info-cards {\n grid-template-columns: 1fr;\n }\n }\n\n / Smooth Scrolling /\n html {\n scroll-behavior: smooth;\n }\n\n / Loading Animation */\n .fade-in {\n opacity: 0;\n transform: translateY(20px);\n transition: all 0.6s ease;\n }\n\n .fade-in.visible {\n opacity: 1;\n transform: translateY(0);\n }\n </style>\n</head>\n<body>\n <!-- ヘッダーセクション -->\n <header class="hero-section">\n <div class="hero-overlay"></div>\n <div class="hero-content">\n <div class="couple-names">\n <span class="bride-name">花子</span>\n <span class="ampersand">&</span>\n <span class="groom-name">太郎</span>\n </div>\n <p class="wedding-date">2026年6月15日</p>\n <p class="invitation-text">私たちの特別な日にご一緒していただけませんか</p>\n \n <!-- カウントダウンタイマー -->\n <div class="countdown-container">\n <h3>あと</h3>\n <div class="countdown-timer" id="countdown">\n <div class="time-unit">\n <span class="time-number" id="days">0</span>\n <span class="time-label">日</span>\n </div>\n <div class="time-unit">\n <span class="time-number" id="hours">0</span>\n <span class="time-label">時間</span>\n </div>\n <div class="time-unit">\n <span class="time-number" id="minutes">0</span>\n <span class="time-label">分</span>\n </div>\n <div class="time-unit">\n <span class="time-number" id="seconds">0</span>\n <span class="time-label">秒</span>\n </div>\n </div>\n </div>\n </div>\n <div class="scroll-indicator">\n <i class="fas fa-chevron-down"></i>\n </div>\n </header>\n\n <!-- 二人の写真セクション -->\n <section class="couple-photos">\n <div class="container">\n <h2 class="section-title">Our Story</h2>\n <div class="photos-grid">\n <div class="photo-card">\n <div class="photo-placeholder">\n <i class="fas fa-heart"></i>\n <p>お二人の写真をここに配置</p>\n </div>\n </div>\n <div class="photo-card">\n <div class="photo-placeholder">\n <i class="fas fa-camera"></i>\n <p>思い出の写真</p>\n </div>\n </div>\n </div>\n <div class="story-text">\n <p>私たちは2020年の春に出会い、お互いを支え合いながら歩んできました。</p>\n <p>この度、皆様に見守られながら新しい人生をスタートさせていただきたく、</p>\n <p>心を込めてご招待申し上げます。</p>\n </div>\n </div>\n </section>\n\n <!-- 式次第セクション -->\n <section class="ceremony-schedule">\n <div class="container">\n <h2 class="section-title">式次第</h2>\n <div class="schedule-timeline">\n <div class="timeline-item">\n <div class="timeline-time">13:30</div>\n <div class="timeline-content">\n <h3>受付開始</h3>\n <p>ゲストの皆様の受付を開始いたします</p>\n </div>\n </div>\n <div class="timeline-item">\n <div class="timeline-time">14:00</div>\n <div class="timeline-content">\n <h3>挙式</h3>\n <p>神前式にて執り行います</p>\n </div>\n </div>\n <div class="timeline-item">\n <div class="timeline-time">15:00</div>\n <div class="timeline-content">\n <h3>写真撮影</h3>\n <p>ご家族・ご友人との記念撮影</p>\n </div>\n </div>\n <div class="timeline-item">\n <div class="timeline-time">17:00</div>\n <div class="timeline-content">\n <h3>披露宴</h3>\n <p>お食事とともにお楽しみください</p>\n </div>\n </div>\n <div class="timeline-item">\n <div class="timeline-time">19:30</div>\n <div class="timeline-content">\n <h3>お開き</h3>\n <p>ありがとうございました</p>\n </div>\n </div>\n </div>\n </div>\n </section>\n\n <!-- アクセス情報セクション -->\n <section class="venue-info">\n <div class="container">\n <h2 class="section-title">会場のご案内</h2>\n <div class="venue-details">\n <div class="venue-card">\n <h3><i class="fas fa-church"></i> 挙式会場</h3>\n <p class="venue-name">○○神社</p>\n <p class="venue-address">〒100-0001 東京都千代田区千代田1-1</p>\n <p class="venue-access">JR東京駅より徒歩5分</p>\n </div>\n <div class="venue-card">\n <h3><i class="fas fa-utensils"></i> 披露宴会場</h3>\n <p class="venue-name">○○ホテル</p>\n <p class="venue-address">〒100-0002 東京都千代田区丸の内1-1</p>\n <p class="venue-access">JR東京駅直結</p>\n </div>\n </div>\n <div class="map-container">\n <div class="map-placeholder">\n <i class="fas fa-map-marker-alt"></i>\n <p>Google Mapsを埋め込み予定</p>\n <button class="map-button" onclick="openMap()">\n <i class="fas fa-external-link-alt"></i>\n Google Mapsで開く\n </button>\n </div>\n </div>\n </div>\n </section>\n\n <!-- 注意事項セクション -->\n <section class="important-info">\n <div class="container">\n <h2 class="section-title">ご案内</h2>\n <div class="info-cards">\n <div class="info-card">\n <i class="fas fa-tshirt"></i>\n <h3>服装について</h3>\n <p>フォーマルな装いでお越しください</p>\n <a href="#dress-code" class="info-link">詳細を見る</a>\n </div>\n <div class="info-card">\n <i class="fas fa-car"></i>\n <h3>駐車場について</h3>\n <p>会場に駐車場をご用意しております</p>\n <a href="#parking" class="info-link">詳細を見る</a>\n </div>\n <div class="info-card">\n <i class="fas fa-gift"></i>\n <h3>ご祝儀について</h3>\n <p>お心遣いありがとうございます</p>\n <a href="#gift" class="info-link">詳細を見る</a>\n </div>\n <div class="info-card">\n <i class="fas fa-phone"></i>\n <h3>お問い合わせ</h3>\n <p>ご不明な点がございましたら</p>\n <a href="#contact" class="info-link">連絡先</a>\n </div>\n </div>\n </div>\n </section>\n\n <!-- RSVP セクション -->\n <section class="rsvp-section">\n <div class="container">\n <h2 class="section-title">出席のご連絡</h2>\n <p class="rsvp-description">\n 恐れ入りますが、<strong>2026年5月15日</strong>までに<br>\n 下記フォームよりご出席の可否をお知らせください。\n </p>\n \n <div class="rsvp-buttons">\n <button class="rsvp-btn primary" onclick="openRSVPForm()">\n <i class="fas fa-edit"></i>\n 出席連絡フォーム\n </button>\n <button class="rsvp-btn secondary" onclick="openGoogleForm()">\n <i class="fab fa-google"></i>\n Google フォームで回答\n </button>\n </div>\n \n <!-- 簡易RSVP フォーム -->\n <div class="rsvp-form-container" id="rsvpFormContainer" style="display: none;">\n <form class="rsvp-form" id="rsvpForm">\n <div class="form-group">\n <label for="guestName">お名前 *</label>\n <input type="text" id="guestName" name="guestName" required>\n </div>\n \n <div class="form-group">\n <label for="attendance">出席 *</label>\n <select id="attendance" name="attendance" required>\n <option value="">選択してください</option>\n <option value="出席">出席</option>\n <option value="欠席">欠席</option>\n </select>\n </div>\n \n <div class="form-group">\n <label for="guestCount">人数</label>\n <select id="guestCount" name="guestCount">\n <option value="1">1名</option>\n <option value="2">2名</option>\n <option value="3">3名</option>\n <option value="4">4名以上</option>\n </select>\n </div>\n \n <div class="form-group">\n <label for="dietaryRestrictions">アレルギー・食事制限</label>\n <textarea id="dietaryRestrictions" name="dietaryRestrictions" rows="3" placeholder="特にない場合は「なし」とご記入ください"></textarea>\n </div>\n \n <div class="form-group">\n <label for="message">メッセージ</label>\n <textarea id="message" name="message" rows="4" placeholder="お祝いのメッセージがございましたらお聞かせください"></textarea>\n </div>\n \n <button type="submit" class="submit-btn">\n <i class="fas fa-paper-plane"></i>\n 送信する\n </button>\n </form>\n </div>\n </div>\n </section>\n\n <!-- フッター -->\n <footer class="footer">\n <div class="container">\n <div class="footer-content">\n <div class="couple-names-footer">\n <span>花子 & 太郎</span>\n </div>\n <p class="wedding-date-footer">2026.06.15</p>\n <p class="thank-you">皆様のご出席を心よりお待ちしております</p>\n </div>\n </div>\n </footer>\n\n <script>\n // 結婚式の日付を設定（年, 月-1, 日, 時, 分, 秒）\n const weddingDate = new Date(2026, 5, 15, 14, 0, 0).getTime(); // 2026年6月15日 14:00\n\n // カウントダウンタイマー\n function updateCountdown() {\n const now = new Date().getTime();\n const timeLeft = weddingDate - now;\n\n if (timeLeft > 0) {\n const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));\n const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));\n const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);\n\n document.getElementById(\'days\').textContent = days;\n document.getElementById(\'hours\').textContent = hours;\n document.getElementById(\'minutes\').textContent = minutes;\n document.getElementById(\'seconds\').textContent = seconds;\n } else {\n // 結婚式当日になった場合\n document.getElementById(\'countdown\').innerHTML = \'<div class="celebration">🎉 本日は結婚式です！ 🎉</div>\';\n }\n }\n\n // 1秒ごとにカウントダウンを更新\n setInterval(updateCountdown, 1000);\n\n // 初回実行\n updateCountdown();\n\n // スムーズスクロール\n document.addEventListener(\'DOMContentLoaded\', function() {\n // スクロールインジケーターのクリックイベント\n const scrollIndicator = document.querySelector(\'.scroll-indicator\');\n if (scrollIndicator) {\n scrollIndicator.addEventListener(\'click\', function() {\n document.querySelector(\'.couple-photos\').scrollIntoView({\n behavior: \'smooth\'\n });\n });\n }\n\n // フェードインアニメーション\n const observerOptions = {\n threshold: 0.1,\n rootMargin: \'0px 0px -50px 0px\'\n };\n\n const observer = new IntersectionObserver(function(entries) {\n entries.forEach(entry => {\n if (entry.isIntersecting) {\n entry.target.classList.add(\'visible\');\n }\n });\n }, observerOptions);\n\n // アニメーション対象の要素を監視\n const animateElements = document.querySelectorAll(\'.section-title, .photo-card, .timeline-item, .venue-card, .info-card\');\n animateElements.forEach(el => {\n el.classList.add(\'fade-in\');\n observer.observe(el);\n });\n });\n\n // RSVP フォーム関連\n function openRSVPForm() {\n const formContainer = document.getElementById(\'rsvpFormContainer\');\n if (formContainer.style.display === \'none\' || formContainer.style.display === \'\') {\n formContainer.style.display = \'block\';\n formContainer.scrollIntoView({ behavior: \'smooth\', block: \'center\' });\n } else {\n formContainer.style.display = \'none\';\n }\n }\n\n function openGoogleForm() {\n // Google Formsのリンクを開く（実際のURLに置き換えてください）\n const googleFormUrl = \'https://forms.google.com/your-form-id\\';\\n window.open(googleFormUrl, \'_blank\');\n }\n\n // Google Mapsを開く\n function openMap() {\n // 実際の会場の住所に置き換えてください\n const address = \'東京都千代田区千代田1-1\';\n const mapsUrl = https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)};\n window.open(mapsUrl, \'_blank\');\n }\n\n // RSVP フォーム送信処理\n document.addEventListener(\'DOMContentLoaded\', function() {\n const rsvpForm = document.getElementById(\'rsvpForm\');\n if (rsvpForm) {\n rsvpForm.addEventListener(\'submit\', function(e) {\n e.preventDefault();\n \n // フォームデータを取得\n const formData = new FormData(rsvpForm);\n const data = {};\n for (let [key, value] of formData.entries()) {\n data[key] = value;\n }\n \n // ここでフォームデータを処理\n console.log(\'RSVP Data:\', data);\n \n // 成功メッセージを表示\n showSuccessMessage();\n \n // フォームをリセット\n rsvpForm.reset();\n \n // フォームを非表示\n document.getElementById(\'rsvpFormContainer\').style.display = \'none\';\n });\n }\n });\n\n function showSuccessMessage() {\n // 成功メッセージを表示\n const successDiv = document.createElement(\'div\');\n successDiv.className = \'success-message\';\n successDiv.innerHTML = \\n <div style=\"\\n background: #4CAF50;\\n color: white;\\n padding: 1rem 2rem;\\n border-radius: 10px;\\n text-align: center;\\n margin: 2rem auto;\\n max-width: 400px;\\n box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);\\n \">\\n <i class=\"fas fa-check-circle\" style=\"margin-right: 0.5rem;\"></i>\\n ご回答ありがとうございました！\\n </div>\\n ;\n \n const rsvpSection = document.querySelector(\'.rsvp-section .container\');\n rsvpSection.appendChild(successDiv);\n \n // 3秒後にメッセージを削除\n setTimeout(() => {\n successDiv.remove();\n }, 3000);\n }\n </script>\n</body>\n</html>') </read-file> </tool_result>" }
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結婚式のご招待 - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #8b7355;
+            --accent-color: #f4e4bc;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --bg-light: #faf8f5;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Serif JP', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .couple-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .bride-name, .groom-name {
+            color: var(--primary-color);
+        }
+        .ampersand {
+            color: var(--white);
+            margin: 0 1rem;
+            font-size: 3rem;
+        }
+        .wedding-date {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .invitation-text {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        .countdown-container {
+            margin-top: 2rem;
+        }
+        .countdown-container h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .time-unit {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 80px;
+        }
+        .time-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .time-label {
+            font-size: 0.9rem;
+            color: var(--white);
+            opacity: 0.8;
+        }
+        section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        .couple-photos {
+            background: var(--white);
+        }
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .photo-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+        .photo-placeholder {
+            height: 300px;
+            background: var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+        }
+        .photo-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .story-text {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        .story-text p {
+            margin-bottom: 1rem;
+        }
+        .ceremony-schedule {
+            background: var(--bg-light);
+        }
+        .schedule-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        .timeline-time {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            min-width: 80px;
+            text-align: center;
+            margin-right: 2rem;
+        }
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .timeline-content p {
+            color: var(--text-light);
+        }
+        .venue-info {
+            background: var(--white);
+        }
+        .venue-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .venue-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        .venue-card:hover {
+            transform: translateY(-5px);
+        }
+        .venue-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .venue-card h3 i {
+            margin-right: 0.5rem;
+        }
+        .venue-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .venue-address, .venue-access {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        .map-container {
+            text-align: center;
+        }
+        .map-placeholder {
+            height: 300px;
+            background: var(--accent-color);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+        }
+        .map-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .map-button {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .map-button:hover {
+            transform: translateY(-2px);
+        }
+        .map-button i {
+            margin-right: 0.5rem;
+        }
+        .important-info {
+            background: var(--bg-light);
+        }
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .info-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .info-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        .info-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .info-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .info-link:hover {
+            color: var(--secondary-color);
+        }
+        .rsvp-section {
+            background: var(--white);
+        }
+        .rsvp-description {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+        }
+        .rsvp-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .rsvp-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .rsvp-btn.primary {
+            background: var(--gradient);
+            color: var(--white);
+        }
+        .rsvp-btn.secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        .rsvp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        .rsvp-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        .submit-btn {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .couple-names-footer {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .wedding-date-footer {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .thank-you {
+            color: var(--accent-color);
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            .ampersand {
+                font-size: 2rem;
+                margin: 0 0.5rem;
+            }
+            .countdown-timer {
+                gap: 1rem;
+            }
+            .time-unit {
+                min-width: 60px;
+                padding: 0.8rem;
+            }
+            .time-number {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .timeline-time {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            .rsvp-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .rsvp-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            .couple-names {
+                font-size: 2rem;
+            }
+            .photos-grid {
+                grid-template-columns: 1fr;
+            }
+            .venue-details {
+                grid-template-columns: 1fr;
+            }
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <div class="couple-names">
+                <span class="bride-name">花子</span>
+                <span class="ampersand">&</span>
+                <span class="groom-name">太郎</span>
+            </div>
+            <p class="wedding-date">2026年6月15日</p>
+            <p class="invitation-text">私たちの特別な日にご一緒していただけませんか</p>
+            <div class="countdown-container">
+                <h3>あと</h3>
+                <div class="countdown-timer" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">0</span>
+                        <span class="time-label">日</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">0</span>
+                        <span class="time-label">時間</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">0</span>
+                        <span class="time-label">分</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">0</span>
+                        <span class="time-label">秒</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="couple-photos">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="photos-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-heart"></i>
+                        <p>お二人の写真をここに配置</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <p>思い出の写真</p>
+                    </div>
+                </div>
+            </div>
+            <div class="story-text">
+                <p>私たちは2020年の春に出会い、お互いを支え合いながら歩んできました。</p>
+                <p>この度、皆様に見守られながら新しい人生をスタートさせていただきたく、</p>
+                <p>心を込めてご招待申し上げます。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ceremony-schedule">
+        <div class="container">
+            <h2 class="section-title">式次第</h2>
+            <div class="schedule-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">13:30</div>
+                    <div class="timeline-content">
+                        <h3>受付開始</h3>
+                        <p>ゲストの皆様の受付を開始いたします</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00</div>
+                    <div class="timeline-content">
+                        <h3>挙式</h3>
+                        <p>神前式にて執り行います</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-content">
+                        <h3>写真撮影</h3>
+                        <p>ご家族・ご友人との記念撮影</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">
+                        <h3>披露宴</h3>
+                        <p>お食事とともにお楽しみください</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">19:30</div>
+                    <div class="timeline-content">
+                        <h3>お開き</h3>
+                        <p>ありがとうございました</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="venue-info">
+        <div class="container">
+            <h2 class="section-title">会場のご案内</h2>
+            <div class="venue-details">
+                <div class="venue-card">
+                    <h3><i class="fas fa-church"></i> 挙式会場</h3>
+                    <p class="venue-name">○○神社</p>
+                    <p class="venue-address">〒100-0001 東京都千代田区千代田1-1</p>
+                    <p class="venue-access">JR東京駅より徒歩5分</p>
+                </div>
+                <div class="venue-card">
+                    <h3><i class="fas fa-utensils"></i> 披露宴会場</h3>
+                    <p class="venue-name">○○ホテル</p>
+                    <p class="venue-address">〒100-0002 東京都千代田区丸の内1-1</p>
+                    <p class="venue-access">JR東京駅直結</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Google Mapsを埋め込み予定</p>
+                    <button class="map-button" onclick="openMap()">
+                        <i class="fas fa-external-link-alt"></i>
+                        Google Mapsで開く
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="important-info">
+        <div class="container">
+            <h2 class="section-title">ご案内</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>服装について</h3>
+                    <p>フォーマルな装いでお越しください</p>
+                    <a href="#dress-code" class="info-link">詳細を見る</a>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-car"></i>
+                    <h3>駐車場について</h3>
+                    <p>会場に駐車場をご用意しております</p>
+                    <a href="#parking" class="info-link">詳細を見る</a>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>ご祝儀について</h3>
+                    <p>お心遣いありがとうございます</p>
+                    <a href="#gift" class="info-link">詳細を見る</a>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>お問い合わせ</h3>
+                    <p>ご不明な点がございましたら</p>
+                    <a href="#contact" class="info-link">連絡先</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvp-section">
+        <div class="container">
+            <h2 class="section-title">出席のご連絡</h2>
+            <p class="rsvp-description">
+                恐れ入りますが、<strong>2026年5月15日</strong>までに<br>
+                下記フォームよりご出席の可否をお知らせください。
+            </p>
+            <div class="rsvp-buttons">
+                <button class="rsvp-btn primary" onclick="openRSVPForm()">
+                    <i class="fas fa-edit"></i>
+                    出席連絡フォーム
+                </button>
+                <button class="rsvp-btn secondary" onclick="openGoogleForm()">
+                    <i class="fab fa-google"></i>
+                    Google フォームで回答
+                </button>
+            </div>
+            <div class="rsvp-form-container" id="rsvpFormContainer" style="display: none;">
+                <form class="rsvp-form" id="rsvpForm">
+                    <div class="form-group">
+                        <label for="guestName">お名前 *</label>
+                        <input type="text" id="guestName" name="guestName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">出席 *</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">選択してください</option>
+                            <option value="出席">出席</option>
+                            <option value="欠席">欠席</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestCount">人数</label>
+                        <select id="guestCount" name="guestCount">
+                            <option value="1">1名</option>
+                            <option value="2">2名</option>
+                            <option value="3">3名</option>
+                            <option value="4">4名以上</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dietaryRestrictions">アレルギー・食事制限</label>
+                        <textarea id="dietaryRestrictions" name="dietaryRestrictions" rows="3" placeholder="特にない場合は「なし」とご記入ください"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" name="message" rows="4" placeholder="お祝いのメッセージがございましたらお聞かせください"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        送信する
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="couple-names-footer">
+                <span>花子 & 太郎</span>
+            </div>
+            <p class="wedding-date-footer">2026.06.15</p>
+            <p class="thank-you">皆様のご出席を心よりお待ちしております</p>
+        </div>
+    </footer>
+
+    <script>
+        const weddingDate = new Date(2026, 5, 15, 14, 0, 0).getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                document.getElementById('countdown').innerHTML = '<div class="celebration">🎉 本日は結婚式です！ 🎉</div>';
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        function openRSVPForm() {
+            const formContainer = document.getElementById('rsvpFormContainer');
+            if (formContainer.style.display === 'none' || formContainer.style.display === '') {
+                formContainer.style.display = 'block';
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                formContainer.style.display = 'none';
+            }
+        }
+        function openGoogleForm() {
+            const googleFormUrl = 'https://forms.google.com/your-form-id';
+            window.open(googleFormUrl, '_blank');
+        }
+        function openMap() {
+            const address = '東京都千代田区千代田1-1';
+            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+            window.open(mapsUrl, '_blank');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const rsvpForm = document.getElementById('rsvpForm');
+            if (rsvpForm) {
+                rsvpForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(rsvpForm);
+                    const data = {};
+                    for (let [key, value] of formData.entries()) {
+                        data[key] = value;
+                    }
+                    console.log('RSVP Data:', data);
+                    showSuccessMessage();
+                    rsvpForm.reset();
+                    document.getElementById('rsvpFormContainer').style.display = 'none';
+                });
+            }
+        });
+        function showSuccessMessage() {
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.innerHTML = `
+                <div style="
+                    background: #4CAF50;
+                    color: white;
+                    padding: 0;
+                    border-radius: 10px;
+                    text-align: center;
+                    margin: 0;
+                    max-width: 400px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                ">
+                    <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
+                    ご回答ありがとうございました！
+                </div>
+            `;
+            const rsvpSection = document.querySelector('.rsvp-section .container');
+            rsvpSection.appendChild(successDiv);
+            setTimeout(() => {
+                successDiv.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
