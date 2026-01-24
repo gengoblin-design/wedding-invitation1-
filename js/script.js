@@ -1,5 +1,5 @@
 // 結婚式の日付を設定（年, 月-1, 日, 時, 分, 秒）
-const weddingDate = new Date(2026, 5, 15, 14, 0, 0).getTime(); // 2026年6月15日 14:00
+const weddingDate = new Date(2026, 8, 26, 10, 40, 0).getTime(); // 2026年9月26日 10:40
 
 // カウントダウンタイマー
 function updateCountdown() {
@@ -81,8 +81,7 @@ function openGoogleForm() {
 
 // Google Mapsを開く
 function openMap() {
-    // 実際の会場の住所に置き換えてください
-    const address = '東京都千代田区千代田1-1';
+    const address = '明治神宮神楽殿 東京都渋谷区代々木神園町1-1';
     const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
     window.open(mapsUrl, '_blank');
 }
