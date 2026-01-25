@@ -313,7 +313,7 @@ section {
 }
 
 .profile-description {
-    color: #ffffff;
+    color: ##1C1C1C;
     line-height: 1.8;
     font-size: 1rem;
 }
@@ -576,7 +576,7 @@ section {
 }
 
 .detail-card {
-    background: linear-gradient(135deg, #E6E6E6 0%, #D3D3D3 100%);
+    background: white;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(28, 28, 28, 0.2);
