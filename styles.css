@@ -213,7 +213,7 @@ body {
     left: 50%;
     width: 0;
     height: 2px;
-    background: #1C1C1C;
+    background: #8B6914;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -760,7 +760,7 @@ section {
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #8B6914;
+    color: #ffffff;
 }
 
 /* フッター */
@@ -783,7 +783,6 @@ section {
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    color: #8B6914;
 }
 
 .wedding-date-footer {
