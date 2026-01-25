@@ -16,7 +16,7 @@ function updateCountdown() {
         document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
     } else {
         // 結婚式当日または過ぎた場合
-        document.getElementById('countdown').innerHTML = '<div class="countdown-complete">本日は誠におめでとうございます！</div>';
+        document.getElementById('countdown').innerHTML = '<div class="countdown-complete">THE DAY OF WEDDING!</div>';
     }
 }
 
