@@ -54,9 +54,10 @@ function handleNavScroll() {
         
         // ナビゲーションの背景透明度調整
         if (scrollTop > 100) {
-            nav.style.background = 'rgba(139, 69, 19, 0.98)';
-        } else {
-            nav.style.background = 'rgba(139, 69, 19, 0.95)';
+            nav.style.background = 'rgba(28, 28, 28, 0.98)';
+        } 
+        else {
+            nav.style.background = 'rgba(28, 28, 28, 0.95)';
         }
         
         // スクロールインジケーターの非表示
